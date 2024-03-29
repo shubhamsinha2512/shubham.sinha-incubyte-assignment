@@ -1,0 +1,23 @@
+{
+  "name": "shubham-sinha-incubyte-assignment",
+  "version": "1.0.0",
+  "description": "shubham sinha incubyte assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhamsinha2512/shubham.sinha-incubyte-assignment.git"
+  },
+  "author": "Shubham Sinha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubhamsinha2512/shubham.sinha-incubyte-assignment/issues"
+  },
+  "homepage": "https://github.com/shubhamsinha2512/shubham.sinha-incubyte-assignment#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
