@@ -25,4 +25,9 @@ describe("String Calculator", () => {
 
         expect(acutalResult).toBe(expectedResult);
     });
+
+    it('4. Should throw exception is input string contains negative numbers', () => {
+        const testString = "10,-2,5,1,-4,-5";
+        expect(() => add(testString)).toThrowError("Negative number are not allowed -2,-4,-5");
+    });
 })

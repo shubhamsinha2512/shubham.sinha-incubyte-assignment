@@ -22,6 +22,12 @@ function add(inputString) {
         }
     }
 
+    //Throw error incase of string contains negative numbers
+    if(negativeNumbers.length > 0) {
+        console.log(negativeNumbers.join(","))
+        throw new Error("Negative number are not allowed " + negativeNumbers.join(","));
+    }
+
     return sum;
 }
 
