@@ -1,12 +1,23 @@
 function add(inputString) {
     let sum = 0;
-    let delimiter = ",";
+    let delimiter = ","; //Defaut delimiter is ","
     let negativeNumbers = [];
 
     //Base case, if string is empty
     if(inputString === "") {
         return sum;
     };
+
+    //Update delimiter if provided
+    const delimiterMatchRegex = new RegExp("^\/\/(.*)\\n");
+    const delimiterMatch = inputString.match(delimiterMatchRegex)
+
+    if(delimiterMatch && delimiterMatch[1]) {
+        delimiter = delimiterMatch[1];
+
+        //remove delimiter part from input string
+        inputString = inputString.substring(delimiterMatch[0].length);
+    }
 
     //Regex to split by delimiter or \n
     const splitRegex = new RegExp(`[${delimiter}\\n]`);
@@ -34,3 +45,5 @@ function add(inputString) {
 }
 
 module.exports = { add };
+
+// add("//;\n1;2")

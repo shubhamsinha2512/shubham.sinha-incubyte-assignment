@@ -38,4 +38,12 @@ describe("String Calculator", () => {
 
         expect(acutalResult).toBe(expectedResult);
     });
+
+    it('6. Should support change of delimiters', () => {
+        const testString = "//;\n1;2";
+        const acutalResult = add(testString);
+        const expectedResult = 3;
+
+        expect(acutalResult).toBe(expectedResult);
+    });
 })
