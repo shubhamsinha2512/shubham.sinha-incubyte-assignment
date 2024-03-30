@@ -1,0 +1,32 @@
+[
+    {
+        "name": "1. Should throw exception is input string contains negative numbers",
+        "scenario": "10,-2,5,1,-4,-5",
+        "expectedResult": "Negative number are not allowed -2,-4,-5"
+    },
+    {
+        "name": "2. Should throw exception for single negative number",
+        "scenario": "-1",
+        "expectedResult": "Negative number are not allowed -1"
+    },
+    {
+        "name": "6. Should throw exception for negatives numers separated by \n",
+        "scenario": "-1\n-2\n-3",
+        "expectedResult": "Negative number are not allowed -1,-2,-3"
+    },
+    {
+        "name": "7. Should throw exception for negative number separated by , & \n",
+        "scenario": "1\n2,-3\n-8\n5,6,7",
+        "expectedResult": "Negative number are not allowed -3,-8"
+    },
+    {
+        "name": "8. Should throw exception for negative number on change of delimiter",
+        "scenario": "//;\n1;-2",
+        "expectedResult": "Negative number are not allowed -2"
+    },
+    {
+        "name": "9. Should throw exception for negative numbers on change of delimiter and mixed with \n",
+        "scenario": "//;\n-5;7\n1;-4",
+        "expectedResult": "Negative number are not allowed -5,-4"
+    }
+]

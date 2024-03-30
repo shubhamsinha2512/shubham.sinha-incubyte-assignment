@@ -1,0 +1,47 @@
+[
+    {
+        "name": "1. Should return 0 for an empty string or nullish values",
+        "scenario": "",
+        "expectedResult": 0
+    },
+    {
+        "name": "2. Should return 0 for an empty string or nullish values",
+        "scenario": null,
+        "expectedResult": 0
+    },
+    {
+        "name": "3. Should return the number itself for a single number",
+        "scenario": "1",
+        "expectedResult": 1
+    },
+    {
+        "name": "4. Should return the sum of two numbers separated by comma'",
+        "scenario": "10,20",
+        "expectedResult": 30
+    },
+    {
+        "name": "5. Should return the sum of two numbers separated by comma'",
+        "scenario": "0,1,5,04,135,643,20",
+        "expectedResult": 808
+    },
+    {
+        "name": "6. Should allow new lines and , delimiter",
+        "scenario": "1\n2,3",
+        "expectedResult": 6
+    },
+    {
+        "name": "7. Should allow new lines and , delimiter",
+        "scenario": "1\n2,3\n8\n5,6,7",
+        "expectedResult": 32
+    },
+    {
+        "name": "8. Should support change of delimiters",
+        "scenario": "//;\n1;2",
+        "expectedResult": 3
+    },
+    {
+        "name": "9. Should support change of delimiters, and \n",
+        "scenario": "//;\n5;7\n1;4",
+        "expectedResult": 17
+    }
+]

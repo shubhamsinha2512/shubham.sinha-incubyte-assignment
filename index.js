@@ -4,7 +4,7 @@ function add(inputString) {
     let negativeNumbers = [];
 
     //Base case, if string is empty
-    if(inputString === "") {
+    if(!inputString || inputString === "") {
         return sum;
     };
 
