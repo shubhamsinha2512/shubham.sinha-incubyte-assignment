@@ -45,5 +45,3 @@ function add(inputString) {
 }
 
 module.exports = { add };
-
-// add("//;\n1;2")
