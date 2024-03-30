@@ -8,8 +8,11 @@ function add(inputString) {
         return sum;
     };
 
+    //Regex to split by delimiter or \n
+    const splitRegex = new RegExp(`[${delimiter}\\n]`);
+
     //Split with delimiter
-    const stringSplit = inputString.split(delimiter);
+    const stringSplit = inputString.split(splitRegex);
 
     //Calculate Sum
     for(const numAsString of stringSplit) {
@@ -24,7 +27,6 @@ function add(inputString) {
 
     //Throw error incase of string contains negative numbers
     if(negativeNumbers.length > 0) {
-        console.log(negativeNumbers.join(","))
         throw new Error("Negative number are not allowed " + negativeNumbers.join(","));
     }
 

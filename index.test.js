@@ -30,4 +30,12 @@ describe("String Calculator", () => {
         const testString = "10,-2,5,1,-4,-5";
         expect(() => add(testString)).toThrowError("Negative number are not allowed -2,-4,-5");
     });
+
+    it('5. should allow new lines between numbers', () => {
+        const testString = "1\n2,3";
+        const acutalResult = add(testString);
+        const expectedResult = 6;
+
+        expect(acutalResult).toBe(expectedResult);
+    });
 })
